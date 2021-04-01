@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 
   console.log(process.env.API_KEY);
 
-  userSchema.plugin(encrypt,{secret:process.env.secret,encryptedFields: ["password"] });
+  userSchema.plugin(encrypt,{secret:process.env.SECRET,encryptedFields: ["password"] });
 
   const User = new mongoose.model("user",userSchema);
 
